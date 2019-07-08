@@ -1,0 +1,93 @@
+/* START GRID CSS */
+@supports(display: grid) {
+
+.header-items {
+    display: grid;
+    grid-template-columns: 1fr .5fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    "header-item-logo header-item-search header-item-car-rent-pro"
+    ;
+}
+
+.header-item-logo {
+    grid-area: header-item-logo;
+}
+
+.header-item-search {
+    grid-area: header-item-search;
+}
+
+.header-item-car-rent-log{
+    grid-area: header-item-car-rent-pro;
+    display: grid;
+    grid-template-columns: .7fr 20% 20% 20%;
+    grid-template-areas: 
+    ". header-item-car header-item-rent header-item-log";
+}
+
+.header-item-car {
+    grid-area: header-item-car;
+}
+
+.header-item-rent {
+    grid-area: header-item-rent;
+}
+
+.header-item-log {
+    grid-area: header-item-log;
+}
+
+.text__home {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    ". h1_home ."
+    ". h2_home ."
+    ;
+}
+
+.text__home__h1 {
+    grid-area: h1_home;
+    place-self: center center;
+}
+
+.text__home__h2 {
+    grid-area: h2_home;
+    place-self: center center;
+}
+
+.text__home__h2:hover {
+    color: black;
+    cursor: pointer;
+    border: 1px solid #111111;
+}
+
+}
+/* END GRID CSS */
+
+/* BASIC FONTS*/
+body,
+button,
+input,
+textarea{
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ font-size:14px;
+ line-height:18px;
+ background: #151515;
+ border-color: rgb(143, 130, 130);
+ color: #999;
+ text-emphasis-color: #999;
+}
+
+a:hover {
+    color: black;
+}
+
+a {
+    color: #999;
+}
+
+/* BASIC FONTS*/

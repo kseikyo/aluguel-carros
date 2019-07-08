@@ -1,0 +1,14 @@
+{% extends 'navbar.html' %}
+
+<head>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'static/carros.css' %}"/>
+    <meta charset="utf-8"/>
+</head>
+{% block content %}
+<div class="carros__list">
+    {% for object in object_list %}
+        {% include 'carro/list-inline.html' with carro=object %}
+    {% endfor %}
+</div>
+{% endblock %}

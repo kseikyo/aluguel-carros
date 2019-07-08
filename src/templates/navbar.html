@@ -1,0 +1,30 @@
+<head>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'static/home.css' %}"/>
+    <meta charset="utf-8"/>
+</head>
+{% if request.user.is_authenticated %}
+<section>
+    <div class="header-items">
+        <div class="header-item-logo">
+            <a href="/home"><img style="height: 48px;" src="{% static 'images/car-rental.png' %}" alt="logo"/></a>
+        </div>
+        <div class="header-item-car-rent-log">
+            <div class="header-item-car">
+                <a href="/carros/">Carros</a>
+            </div>
+            <div class="header-item-rent">
+                <a href="/alugueis">Alugueis</a>
+            </div>
+            <div class="header-item-log">
+                <a href="/logout/">logout</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+<main> 
+    {% block content %}
+
+    {% endblock %}
+</main>

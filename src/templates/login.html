@@ -1,0 +1,15 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'static/login.css' %}"/>
+    <meta charset="utf-8"/>
+</head>
+{% block content %}
+<div class="wrapper-login"> 
+    <div class="div_login__form"> 
+        <form class="login__form" action="" method="POST"> {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+.wrapper-login {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1.8fr 1fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: 
+    ". . ."
+    ". login ."
+    ". . .";
+}
+
+.div_login__form {
+    grid-area: login;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "login_form";
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.login__form {
+    grid-area: login_form;
+    place-self: center;
+    border-radius: 10px;
+}
+
+body,
+button,
+input,
+textarea {
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ font-size:14px;
+ line-height:18px;
+ background: #151515;
+ border-color: rgb(143, 130, 130);
+ color: #999;
+ text-emphasis-color: #999;
+ border-radius: 9px;
+}

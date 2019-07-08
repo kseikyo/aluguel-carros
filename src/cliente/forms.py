@@ -1,0 +1,23 @@
+from django import forms
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from .models import CustomCliente
+
+class CustomUserCreationForm(UserCreationForm):
+    email     = forms.EmailField(required=True, label='', widget=forms.TextInput(attrs={'placeholder':'Email'}))
+    full_name = forms.CharField(required=True, label='', widget=forms.TextInput(attrs={'placeholder':'Nome completo'}))
+    username  = forms.CharField(required=True, label='', widget=forms.TextInput(attrs={'placeholder':'Nome de usuário'}))
+    password1 = forms.CharField(required=True, label='', widget=forms.PasswordInput(attrs={'placeholder':'Senha'}))
+    password2 = None
+    class Meta(UserCreationForm):
+        model  = CustomCliente
+        fields = ('email', 'full_name', 'username', 'password1')
+        
+    
+class CustomUserChangeForm(UserChangeForm):
+    class Meta(UserChangeForm):
+        model  = CustomCliente
+        fields = ('username', 'email', 'full_name')
+
+class UserForm(forms.Form):
+    username = forms.CharField(label='', widget=forms.TextInput(attrs={'placeholder':'Nome de usuário ou email'}))
+    password = forms.CharField(label='', widget=forms.PasswordInput(attrs={'placeholder': 'Senha'}))
