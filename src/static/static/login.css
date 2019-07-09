@@ -38,3 +38,8 @@ textarea {
  text-emphasis-color: #999;
  border-radius: 9px;
 }
+
+button:hover, input:hover {
+    color: white;
+    background: black;
+}

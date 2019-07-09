@@ -1,6 +1,10 @@
-<div class="carro__object">
-    <h2 class="carro__nome" >{{carro.nome}}</h2>
-    <h2 class="carro__marca">{{carro.marca}}</h2>
-    <h2 class="carro__cor"  >{{carro.cor}}</h2>
-    <h2 class="carro__preco">{{carro.preco}}</h2>
+{% load static%}
+<link rel="stylesheet" href="{% static 'static/carros.css' %}"/>
+
+<div class="carros__item">
+    <h2 class="carro__nome" >Nome: {{carro.nome}}</h2>
+    <h2 class="carro__marca">Marca: {{carro.marca}}</h2>
+    <h2 class="carro__cor"  >Cor: {{carro.cor}}</h2>
+    <h2 class="carro__preco">Preço: {{carro.preco}}</h2>
+    <a class="carro__form__submit" href="/alugueis/{{carro.id}}"><button >Alugar</button></a>
 </div>

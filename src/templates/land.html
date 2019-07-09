@@ -3,13 +3,14 @@
 <head>
     {% load static %}
     <link rel="stylesheet" href="{% static 'static/sign_in.css' %}"/>
+    <link rel="stylesheet" href="{% static 'static/shadows.css' %}"/>
     <meta charset="utf-8"/>
 </head>
 <body>
     <div>
         {% block content %}
         <div class="wrapper-land">
-            <div class="sign-in">
+            <div class="sign-in md-whiteframe-4dp">
                 <div class="card-sign-in">
                     <form action="" method="POST"> {% csrf_token %}
                         <h2 class="landing-p-text" style="text-align: center;">Cadastre-se para alugar carros.</h2>

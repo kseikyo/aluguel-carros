@@ -12,7 +12,7 @@
         ". . . ."
         " . sign-in  . ."
         "footer footer footer footer"
-    ; 
+    ;
 }
 
 .sign-in {
@@ -61,6 +61,27 @@ textarea {
  
 }
 
+button:hover {
+    background: black;
+    color: white;
+}
+input:hover {
+    background: black;
+    color: white;
+}
+textarea:hover {
+    background: black;
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
+a {
+    color: #999;
+}
+
 .landing-p-text {
     text-align: center;
     font-size: 14px; 
@@ -73,13 +94,12 @@ body {
 }
 
 .btn-common {
-    color: #fff8f9;
-    background: #3897f0;
+    color: #999;
+    background: #151515;
     display:block; 
     width: 90%;
     margin:auto; 
     border-radius: 8px;
 }
-
 
 /* BASIC FONTS*/
