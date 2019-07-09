@@ -1,6 +1,5 @@
 from django.db import models
 from cliente.models import CustomCliente
-from datas.models import Datas
 
 # class CarroQuerySet(models.QuerySet):
 # 	def is_rented(self):
@@ -29,7 +28,6 @@ class Carro(models.Model):
     cor               = models.CharField(max_length=15)
     preco             = models.DecimalField(max_digits=10, decimal_places=2)
     alugado_por       = models.ForeignKey(CustomCliente, on_delete=models.SET_NULL, null=True, blank=True)
-    datas_disponíveis = models.ManyToManyField(Datas)
 
     def __str__(self):
         return self.nome

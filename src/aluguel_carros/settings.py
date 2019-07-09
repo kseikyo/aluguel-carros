@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'carro.apps.CarroConfig',
     'cliente.apps.ClienteConfig',
     'aluguel.apps.AluguelConfig',
-    'datas.apps.DatasConfig',
 ]
 
 MIDDLEWARE = [
