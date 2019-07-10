@@ -1,0 +1,20 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+<head>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'static/alugar.css' %}"/>
+    <link rel="stylesheet" href="{% static 'static/shadows.css' %}"/>
+    <meta charset="utf-8"/>
+</head>
+
+<div class="wrapper-alugar">
+    <div class="div_alugar__form md-whiteframe-4dp">
+        <p class="p_name">Carro: {{carro.nome}}</p>
+        <form class="alugar__form" action="" method="POST"> {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Confirmar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

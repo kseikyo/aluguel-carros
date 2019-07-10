@@ -3,4 +3,12 @@ from aluguel.models import Aluguel
 from carro.models import Carro
 
 class AluguelForm(forms.Form):
-    preco             = forms.DecimalField()
+    dias_de_aluguel  = forms.ChoiceField(choices=list(range(1,11)))
+    preco_por_diaria = forms.CharField(widget=forms.TextInput(attrs={'readonly':'True'}))
+    total_a_pagar    = forms.DecimalField(decimal_places=2)
+
+class AluguelModelForm(forms.ModelForm):
+    class Meta:
+        model  = Aluguel
+        fields = ['formas_de_pagamento', 'dias_de_aluguel', 'carro', 'cliente']
+        widgets = {'carro': forms.HiddenInput(), 'cliente': forms.HiddenInput()}

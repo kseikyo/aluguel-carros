@@ -40,12 +40,15 @@ def login_view(request):
 def home_page(request):
     if request.user.is_authenticated:
         user = request.user
-        if request.method == 'POST':
-            logout(request)
-            return redirect('login')
         context = {'cliente': user}
         template_name = 'home.html'
     else:
         raise Http404
         
     return render(request, template_name, context)
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+
+    return render(request, 'login.html', {})

@@ -1,0 +1,54 @@
+.wrapper-alugar {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1.8fr 1fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas:
+    ". . ."
+    ". alugar ."
+    ". . .";
+}
+
+.div_alugar__form {
+    grid-area: alugar;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .01fr 1fr;
+    grid-template-areas:
+    "car_name"
+    "alugar_form"
+    ;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.alugar__form {
+    grid-area: alugar_form;
+    place-self: stretch center;
+    border-radius: 10px;
+}
+
+.p_name {
+    grid-area: car_name;
+    place-self: stretch center;
+}
+
+body,
+button,
+input,
+textarea {
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ font-size:14px;
+ line-height:18px;
+ background: #151515;
+ border-color: rgb(143, 130, 130);
+ color: #999;
+ text-emphasis-color: #999;
+ border-radius: 9px;
+}
+
+button:hover, input:hover {
+    color: white;
+    background: black;
+}
