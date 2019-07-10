@@ -8,9 +8,12 @@
               Voltar ao início
     </button>
     </a>
-    <form class="aluguel__submit" style="position: relative; left: 60;"action="" method="POST"> {% csrf_token %}
-        <button name='carro_nome' value="{{aluguel.carro.nome}}"type="submit">
-                Cancelar aluguel
-        </button>
-    </form>
+    {% now "j" as hoje+1%}
+    {% if aluguel.data_inicio|date:"j" != hoje %}
+        <form class="aluguel__submit" style="position: relative; left: 60;"action="" method="POST"> {% csrf_token %}
+            <button name='carro_nome' value="{{aluguel.carro.nome}}"type="submit">
+                    Cancelar aluguel
+            </button>
+        </form>
+    {% endif %}
 </div>

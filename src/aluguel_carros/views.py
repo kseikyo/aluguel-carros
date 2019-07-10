@@ -36,7 +36,7 @@ def login_view(request):
                     login(request, user)
                     return redirect('/admin')
             else:
-                return redirect('landing_view')
+                return redirect('login')
         
     return render(request, 'login.html', {'form': form})
 

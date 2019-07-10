@@ -46,6 +46,7 @@
 .aluguel__submit {
     grid-area: submit;
     place-self: center;
+    cursor: pointer;
 }
 
 
