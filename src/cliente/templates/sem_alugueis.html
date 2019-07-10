@@ -1,0 +1,23 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+
+<head>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'static/login.css' %}"/>
+    <meta charset="utf-8"/>
+</head>
+
+<div class="wrapper-login">
+    <h1 style="position: relative; left: 470;">Ainda não alugou nada?</h1>
+    <div class="div_login__form">
+        <div class="login__form">
+            <a href="/">
+            <button>
+                Voltar ao início
+            </button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

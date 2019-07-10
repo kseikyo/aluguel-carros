@@ -21,7 +21,7 @@
 .header-item-car-rent-log{
     grid-area: header-item-car-rent-pro;
     display: grid;
-    grid-template-columns: .7fr 20% 20% 20%;
+    grid-template-columns: .7fr 1fr 1fr 1fr;
     grid-template-areas: 
     ". header-item-car header-item-rent header-item-log";
 }
@@ -69,6 +69,8 @@
 /* END GRID CSS */
 
 /* BASIC FONTS*/
+
+
 body,
 button,
 input,
@@ -80,6 +82,7 @@ textarea{
  border-color: rgb(143, 130, 130);
  color: #999;
  text-emphasis-color: #999;
+ 
 }
 
 a:hover {

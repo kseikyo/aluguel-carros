@@ -1,0 +1,16 @@
+<div class="alugueis__item">
+    <p class="aluguel__locador">Locador: {{aluguel.cliente.full_name}}</p>
+    <p class="aluguel__carro">Carro: {{aluguel.carro.nome}}</p>
+    <p class="aluguel__alugado_por">Alugado por {{aluguel.dias_de_aluguel}} dias</p>
+    <p class="aluguel__total">Total a pagar: {{aluguel.total}}</p>
+    <a class="aluguel__submit" style="position: relative; right: 60; bottom: 7;" href="/">
+    <button >
+              Voltar ao início
+    </button>
+    </a>
+    <form class="aluguel__submit" style="position: relative; left: 60;"action="" method="POST"> {% csrf_token %}
+        <button name='carro_nome' value="{{aluguel.carro.nome}}"type="submit">
+                Cancelar aluguel
+        </button>
+    </form>
+</div>
