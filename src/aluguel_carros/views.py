@@ -29,9 +29,12 @@ def login_view(request):
         user     = authenticate(request, username=username, password=password)
         if form.is_valid():
             if user is not None:
-                if user.is_active:
+                if user.is_active and not user.is_staff:
                     login(request, user)
                     return redirect('home_page')
+                else:
+                    login(request, user)
+                    return redirect('/admin')
             else:
                 return redirect('landing_view')
         
