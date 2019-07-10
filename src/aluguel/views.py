@@ -17,6 +17,7 @@ def alugar_carro(request, id):
         dias_de_aluguel     = new_form['dias_de_aluguel']
         Aluguel.objects.create(carro=carro, cliente=cliente, formas_de_pagamento=formas_de_pagamento, dias_de_aluguel=dias_de_aluguel, total=dias_de_aluguel*carro.preco)
         carro.alugado_por = cliente
+        carro.save()
         return redirect('home_page')
 
     obj = get_object_or_404(Carro, id=id)
