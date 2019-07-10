@@ -1,12 +1,26 @@
 {% extends 'navbar.html' %}
 
 {% block content %}
-<div class="wrapper-alugar">
-    <div class="div_alugar__form md-whiteframe-4dp">
-        <div class="alugar__form">
+
+<head>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'static/login.css' %}"/>
+    <meta charset="utf-8"/>
+</head>
+
+<div class="wrapper-login">
+    <h1 style="position: relative; left: 547;">Meus aluguéis</h1>
+    <div class="div_login__form md-whiteframe-4dp">
+        <div class="login__form">
             <p>Locador: {{aluguel.cliente.full_name}}</p>
             <p>Carro: {{aluguel.carro.nome}}</p>
+            <p>Alugado por {{aluguel.dias_de_aluguel}} dias</p>
             <p>Total a pagar: {{aluguel.total}}</p>
+            <a href="/">
+            <button>
+                Voltar ao início
+            </button>
+            </a>
         </div>
     </div>
 </div>

@@ -15,11 +15,14 @@ def logout_view(request):
     return render(request, 'login.html', {})
 
 def mostrar_relatorio(request, id):
-    aluguel = Aluguel.objects.get(cliente=CustomCliente.objects.get(id=id))
-    if aluguel is not None :
-        context = {'aluguel': aluguel}
-        template_name = 'relatorio.html'
-    else:
+    try:
+        aluguel = Aluguel.objects.get(cliente=CustomCliente.objects.get(id=id))
+        if aluguel is not None :
+            context = {'aluguel': aluguel}
+            template_name = 'relatorio.html'
+        else:
+            raise Http404
+    except:
         raise Http404
 
     return render(request, template_name, context)
